@@ -1,0 +1,82 @@
+extends layout
+
+block content
+    .nav
+        .logo
+            img.logo-img(src="/images/logo.png", alt="随时随地，记录此刻")
+        #btnBox.btnBox
+            a#login.hovers.login(href="#") 登录
+            span.slash /
+            a#register.hovers.register(href="#") 注册
+        #btnBox_logined.btnBox_logined
+            span#greetings
+            a#username.hovers.username(href="#")
+            a#logout.hovers.logout(href="/logout") 注销
+    .cover
+    .loginBox
+        .loginBox_row1
+            a.loginText(href="#") 登录
+            a.registerText(href="#") 注册
+        .loginBox_row2
+            #login_form
+                form.login_table(method="post")
+                    input#loginUserText.l_input(type="text", placeholder="请输入用户名/手机号")
+                    p#wrongUser.reminder
+                    input#loginPSWText.l_input(type="password", placeholder="6-16位密码，区分大小写，不支持空格")
+                    p#wrongPSW.reminder
+                    a.forgetPSW(href="#") 忘记密码
+                    input#login_btn.login_btn(type="button", value="登 录")
+            #register_form
+                form.register_table(method="post")
+                    input#usernameText.l_input(type="text", name="username", placeholder="请输入用户名/手机号")
+                    p#errorUsername.reminder
+                    input#passwordText.l_input(type="password", name="password", placeholder="6-16位密码，区分大小写，不支持空格")
+                    p#diffPassword.reminder
+                    input#confirmpassword.l_input(type="password", name="confirmpassword", placeholder="再输入一次密码")
+                    input#register_btn.register_btn(type="button", value="注 册")
+    .main
+        .left
+            a#createNote.createNote(href="/article", target="_blank") 记录一下
+            .authors
+                h2 推荐作者
+                ul.authors_ul
+                    each item in authors
+                        li.authors_li
+                            a.authors_head(href="#", target="_blank")
+                                img(src="/images/header.png" alt="")
+                            .authors_info
+                                a.authors_name(href="#", title="", target="_blank") #{item.username}
+                                p.authors_sign(title="") #{item.sign}
+        .content
+            .newsScroll
+                .scroll-box
+                    .scroll-img
+                        img(src="/images/01.jpg", alt="")
+                        img(src="/images/02.jpg", alt="")
+                        img(src="/images/03.jpg", alt="")
+                    .scroll-btn
+                        span.on(index="1")
+                        span(index="2")
+                        span(index="3")
+                .recommended-box
+                    h3 推荐文章
+                    ul
+                        each item in articles_recommended
+                            li
+                                a.recommended_topic(href="/#{item._id}", title="", target="_blank") #{item.topic}
+                                p #{item.author}
+            .content-label
+                a.selected(href="#") 最新
+            each item in articles
+                .eachText
+                    h3.each-h3
+                        a.each-h3-a(href="/#{item._id}", target="_blank") #{item.topic}
+                    p.each-p
+                        | #{item.content}
+                    a.each-a(href="#") #{item.author}
+        .right
+    .foot
+        img.foot-img(src="/images/logo.png", alt="随时随地，记录此刻")
+        span.foot-text 在这里记录下匆匆飞逝的时光
+        span.foot-copyright Copyright 2017 Daily note. All rights reserved.
+    script(type="text/javascript", src="/javascripts/index.js")

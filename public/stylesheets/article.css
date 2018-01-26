@@ -1,0 +1,148 @@
+/*编辑区样式*/
+.editor {
+    width: 100%;
+}
+
+.article_h2 {
+    margin: 0 auto;
+    width: 80%;
+    padding: 30px 0 0 0;
+}
+
+.article_top {
+    margin: 0 auto;
+    width: 80%;
+    padding: 30px 0 0 0;
+}
+
+.article_topic {
+    width: 50%;
+    height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.article_editor, .article_btn {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.article_reminder {
+    width: 50%;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    color: #f82000;
+}
+
+.publish {
+    display: block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: #f7f7f7;
+    border: none;
+    background-color: #f82000;
+}
+.publish:hover {background-color: rgba(248, 32, 0, 0.82);}
+
+/*文章详情页样式*/
+.detail_main {
+    width: 100%;
+    min-height: 100%;
+}
+
+.detail_main .detail_head {
+    position: relative;
+    width: 100%;
+    background-color: rgba(231, 245, 238, 0.5);
+}
+
+.detail_main .detail_head .detail_title_topic {
+    margin-left: 150px;
+    padding: 20px 0;
+    width: 40%;
+}
+
+.detail_main .detail_head .detail_title_topic span {
+    font-family: 微软雅黑;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.detail_main .detail_head .detail_info {
+    margin: 0 150px;
+    padding-bottom: 30px;
+    width: 40%;
+}
+
+.detail_main .detail_head .detail_info .detail_title_time {
+    float: left;
+    font-size: 14px;
+    color: #959193;
+}
+
+.detail_main .detail_head .detail_author {
+    position: absolute;
+    right: 10%;
+    top: 30px;
+    padding: 10px 0;
+    width: 22%;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #e4dce6;
+}
+
+.detail_main .detail_head .detail_author .detail_author_head {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.detail_main .detail_head .detail_author .detail_author_head img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+}
+
+.detail_main .detail_head .detail_author .detail_author_name {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+    max-width: 50%;
+    font-family: 微软雅黑;
+    font-size: 16px;
+    color: #072d4c;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.detail_main .detail_head .detail_author .detail_author_about {
+    width: 100%;
+    text-align: center;
+}
+
+.detail_main .detail_head .detail_author .detail_author_about .detail_about_articles {
+    display: inline-block;
+    font-family: 微软雅黑;
+    font-size: 16px;
+    color: #596768;
+    width: 30%;
+    line-height: 50px;
+}
+
+.detail_main .detail_left {
+    width: 50%;
+    padding: 20px 0;
+    margin-left: 150px;
+    letter-spacing: 1.5px;
+    line-height: 40px;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,STHeiti,"Microsoft Yahei",sans-serif;
+    font-size: 16px;
+    word-wrap: break-word;
+}

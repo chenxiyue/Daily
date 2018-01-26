@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    .nav
+        .logo
+            img.logo-img(src="/images/logo.png", alt="随时随地，记录此刻")
+        #btnBox_logined.btnBox_logined
+            span#greetings
+            a#username.hovers.username(href="#") #{username}！
+            a#logout.hovers.logout(href="/logout") 注销
+    .article_h2
+        h2="创建笔记"
+    .article_top
+        input#article_topic.article_topic(type="text", placeholder="请在此输入标题")
+        p#topic_wrong.article_reminder
+    .article_editor
+        #editor.editor
+        p#content_wrong.article_reminder
+    .article_btn
+        input#publish.publish(type="button", value="发布")
+    .foot
+        img.foot-img(src="/images/logo.png", alt="随时随地，记录此刻")
+        span.foot-text 在这里记录下匆匆飞逝的时光
+        span.foot-copyright Copyright 2017 Daily note. All rights reserved.
+    script(type="text/javascript", src="/javascripts/article.js")
